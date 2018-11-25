@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
   </head>
   <body>
   	<header>
@@ -20,7 +21,27 @@
 	  		<ul>
 	  			<li><a href="#">Поиск</a></li>
 	  			<li><a href="#">Вход</a></li>
-	  			<li><a href="#">Корзина</a></li>
+	  			<li><a href="#">Корзина</a>
+							<ul class="visually-hidden">
+								<li>
+									<button>Удалить</button>
+									<img src="img/icon_product_1.jpg" width="33" height="33" alt="Изображение продукта 1">
+									Пломбир с апельсиновым джемом
+									<p>1,5 кг х 200 руб.</p>
+									<p class="price">300 руб.</p>
+								</li>
+								<li>
+									<button>Удалить</button>
+									<img src="img/icon_product_2.jpg" width="33" height="33" alt="Изображение продукта 2">
+									Клубничный пломбир с присыпкой из белого шоколада
+									<p>1,5 кг х 300 руб.</p>
+									<p class="price">450 руб.</p>
+								</li>
+							</ul>
+							<hr>
+							<p>Итого: 750 руб.</p>
+							<a href="#">Оформить заказ</a>
+	  			</li>
 	  		</ul>
   		</div>
   		<section>
