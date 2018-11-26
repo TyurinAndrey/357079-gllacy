@@ -1,64 +1,64 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Глейси</title>
-    <link rel="stylesheet" href="css/style.css" type="text/css"/>
-  </head>
-  <body>
-  	<!-- Дмитрий, сделал чуть больше, чем требовалось по ДЗ, подскажи, хотя бы в правильном направлении думаю про слайдер? -->
-  	<header>
-  		<a href="index.html" class="main-header-logo">
-  			<img src="img/glassyshop_logo.svg" width="154" height="64" alt="GllacyShop логотип">
-  		</a>
-  		<nav>
-  			<ul>
-  				<li>
-  					<a href="catalog.html">Каталог</a>
-  					<ul>
-  						<li><a href="#">Новинки</a></li>
-  						<li><a href="#">Сливочное</a></li>
-  						<li><a href="#">Щербеты</a></li>
-  						<li><a href="#">Фруктовый лед</a></li>
-  						<li><a href="#">Новинки</a></li>
-  					</ul>
-  				</li>
-  				<li><a href="delivery.html">Доставка и оплата</a></li>
-  				<li><a href="about.html">О Компании</a></li>
-  			</ul>
-  		</nav>
-  		<div class="customer-menu">
-	  		<ul>
-	  			<li>
-	  				<a href="#">Поиск</a>
+		<head>
+			<meta charset="utf-8">
+			<title>HTML Academy: Глейси</title>
+			<link rel="stylesheet" href="css/style.css" type="text/css"/>
+		</head>
+		<body>
+			<!-- Дмитрий, сделал чуть больше, чем требовалось по ДЗ, подскажи, хотя бы в правильном направлении думаю про слайдер? -->
+			<header>
+				<a href="index.html" class="main-header-logo">
+					<img src="img/glassyshop_logo.svg" width="154" height="64" alt="GllacyShop логотип">
+				</a>
+				<nav>
+					<ul>
+						<li>
+							<a href="catalog.html">Каталог</a>
+							<ul>
+								<li><a href="#">Новинки</a></li>
+								<li><a href="#">Сливочное</a></li>
+								<li><a href="#">Щербеты</a></li>
+								<li><a href="#">Фруктовый лед</a></li>
+								<li><a href="#">Новинки</a></li>
+							</ul>
+						</li>
+						<li><a href="delivery.html">Доставка и оплата</a></li>
+						<li><a href="about.html">О Компании</a></li>
+					</ul>
+				</nav>
+				<div class="customer-menu">
+					<ul>
+						<li>
+							<a href="#">Поиск</a>
 							<form class="find-menu" action="/echo" method="post">
-        <label for="find">Поиск</label>
-        <!-- Поле поиска -->
-        <input type="text" name="text" required placeholder="Что ищем?">
-      	</form>
-	  			</li>
-	  			<li>
-	  				<a href="#">Вход</a>
+								<label for="find">Поиск</label>
+								<!-- Поле поиска -->
+								<input type="text" required placeholder="Что ищем?" id="find">
+							</form>
+						</li>
+						<li>
+							<a href="#">Вход</a>
 							<form class="enter-menu" action="/echo" method="post">
-        <label for="email">Email</label>
-        <!-- Поле ввода электронной почты -->
-        <input type="email" name="email" required placeholder="Электронная почта">
-        <label for="password">Пароль</label>
-        <!-- Поле ввода пароля электронной почты -->
-        <input type="password" name="password" required placeholder="Пароль">
-        <button>Войти</button>
-        <a href="#">Забыли пароль?</a>
-        <a href="#">Новая регистрация</a>
-      	</form>
-	  			</li>
-	  			<li><a href="#">Корзина</a></li>
-	  		</ul>
-  		</div>
-  		<section>
-  			<p>С 10 до 20, ежедневно</p>
-  			<p>8 812 450-25-25</p>
-  		</section>
-  	</header>
+								<label for="email-user">Email</label>
+								<!-- Поле ввода электронной почты -->
+								<input type="email" required placeholder="Электронная почта" id="email-user">
+								<label for="password">Пароль</label>
+								<!-- Поле ввода пароля электронной почты -->
+								<input type="password" required placeholder="Пароль" id="password">
+								<button>Войти</button>
+								<a href="#">Забыли пароль?</a>
+								<a href="#">Новая регистрация</a>
+							</form>
+						</li>
+						<li><a href="#">Корзина</a></li>
+					</ul>
+				</div>
+				<section>
+					<p>С 10 до 20, ежедневно</p>
+					<p>8 812 450-25-25</p>
+				</section>
+			</header>
 			
 			<div class="carousel-slide">
 				 <!-- создание маркеров перехода для слайдера -->
@@ -173,12 +173,13 @@
 				</article>
 				
 				<form>
-		   <legend>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно=)
-		   </legend>
-		   <input type="email" id="email" placeholder="Электронная почта">
-		   <p>
-		    <input type="submit" value="Отправить">
-		   </p>
+					<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно=)
+					</p>
+					<label for="email">Почта пользователя</label>
+					<input type="email" id="email" placeholder="Электронная почта">
+					<p>
+						<button type="submit">Отправить</button>
+					</p>
 				</form>
 
 			<!-- 	Здесь будет карта -->
@@ -222,18 +223,17 @@
 
 			<form class="feedback-form" action="/echo" method="post">
 				<h3>Мы обязательно вам ответим!</h3>
-    <label for="name">Имя</label>
-    <!-- Поле ввода имени -->
-    <input type="name" name="name" required placeholder="Как вас зовут?">
-    <label for="email">Почта</label>
-    <!-- Поле ввода электронной почты -->
-    <input type="email" name="email" required placeholder="Ваша почта для ответа?">
-    <label for="text">Вопрос</label>
-    <!-- Поле ввода вопроса -->
-    <input type="text" name="text" required placeholder="Напишите что-нибудь...">
-    <button>
-    <input type="submit" value="Отправить"></button>
-   </form>	
+				<label for="name-customer">Имя</label>
+				<!-- Поле ввода имени -->
+				<input type="text" required placeholder="Как вас зовут?" id="name-customer">
+				<label for="email-customer">Почта</label>
+				<!-- Поле ввода электронной почты -->
+				<input type="email" required placeholder="Ваша почта для ответа?" id="name-customer">
+				<label for="question-customer">Вопрос</label>
+				<textarea name="text" id="question-customer" cols="30" rows="6">Напишите что-нибудь...</textarea>
+				<button>
+				<input type="submit" value="Отправить"></button>
+			</form>	
 
-  </body>
+		</body>
 </html>
