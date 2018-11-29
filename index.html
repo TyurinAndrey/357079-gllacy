@@ -3,6 +3,8 @@
 		<head>
 			<meta charset="utf-8">
 			<title>HTML Academy: Глейси</title>
+			<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+			<link rel="stylesheet" href="css/normalize.css" type="text/css"/>
 			<link rel="stylesheet" href="css/style.css" type="text/css"/>
 		</head>
 		<body>
@@ -12,10 +14,10 @@
 					<img src="img/glassyshop_logo.svg" width="154" height="64" alt="GllacyShop логотип">
 				</a>
 				<nav>
-					<ul>
+					<ul class="main-navigation">
 						<li>
 							<a href="catalog.html">Каталог</a>
-							<ul>
+							<ul class="pop-up-menu">
 								<li><a href="#">Новинки</a></li>
 								<li><a href="#">Сливочное</a></li>
 								<li><a href="#">Щербеты</a></li>
@@ -194,7 +196,7 @@
 			</section>
 
 			</main>
-			<footer>
+			<footer class="footer-nav">
 				<div class="social">
 					<ul>
 						<li><a href="#" class="social-button">Твиттер</a></li>
@@ -228,11 +230,10 @@
 				<input type="text" required placeholder="Как вас зовут?" id="name-customer">
 				<label for="email-customer">Почта</label>
 				<!-- Поле ввода электронной почты -->
-				<input type="email" required placeholder="Ваша почта для ответа?" id="name-customer">
+				<input type="email" required placeholder="Ваша почта для ответа?" id="email-customer">
 				<label for="question-customer">Вопрос</label>
 				<textarea name="text" id="question-customer" cols="30" rows="6">Напишите что-нибудь...</textarea>
-				<button>
-				<input type="submit" value="Отправить"></button>
+				<button type="submit">Отправить</button>
 			</form>	
 
 		</body>
