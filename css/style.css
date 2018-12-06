@@ -1,7 +1,7 @@
 body{
+	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	width: 1200px;
 	font-family: "Roboto", Arial, sans-serif;
 	font-size: 16px;
 	line-height: 22px;
@@ -18,19 +18,39 @@ a{
 	width: 1150px;
 	margin: 0 auto;
 	padding: 0 10px;
+}
+
+.flex-gorizontal{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 }
 
+.flex-gorizontal-reverse{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap-reverse;
+}
+
+.flex-vertical{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
 .navigation-menu{
-	width: 540px;
 	flex-direction: column;
 	justify-content: space-between;
 }
 
-.logo-wrapper{
-	width: 160px;
+.main-header-logo{
+	flex-shrink: 0;
+	display: block;
+}
+
+.main-navigation{
+	flex-grow: 1;
 }
 
 .main-navigation li{
@@ -45,8 +65,8 @@ a{
 }
 
 .customer-menu{
-	width: 300px;
-	list-style: none;
+	flex-shrink: 0;
+	min-width: 267px;
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 16px;
@@ -54,9 +74,17 @@ a{
 	color: #ffffff;
 }
 
+.customer-menu li{
+	list-style: none;
+}
+
 .customer-menu a,
 .main-navigation a{
 	color: #ffffff;
+}
+
+.work-time{
+	flex-shrink: 2;
 }
 
 
@@ -77,12 +105,11 @@ a{
 }
 
 .catalog-list{
-	width: 1150px;
-	margin-left: 25px;
+	padding: 0;
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .catalog-list li{
@@ -91,8 +118,6 @@ a{
 }
 
 .advantages-list{
-	width: 1150px;
-	margin-left: 25px;
 	margin-bottom: 40px;
 	color: #323232;
 	font-size: 16px;
@@ -115,25 +140,23 @@ a{
 	color: #323232;
 }
 
-.advantage_1{
+.advantage_ice_cream{
 	background: url(./../img/icon_ice_cream.svg) top left no-repeat;
 }
 
-.advantage_2{
+.advantage_farm{
 	background: url(./../img/icon_cow.svg) top left no-repeat;
 }
 
-.advantage_3{
+.advantage_ingredient{
 	background: url(./../img/icon_leath.svg) top left no-repeat;
 }
 
-.advantage_4{
+.advantage_thermo{
 	background: url(./../img/icon_temperature.svg) top left no-repeat;
 }
 
 .info-stend{
-	width: 1150px;
-	margin-left: 25px;
 	margin-bottom: 40px;
 	display: flex;
 	flex-direction: row;
@@ -144,7 +167,6 @@ a{
 	font-size: 16px;
 	line-height: 22px;
 	width: 560px;
-	height: 220px;
 	border-radius: 14px;
 	background-image: url(./../img/strawberry_background.jpg);
 }
@@ -163,7 +185,6 @@ a{
 	line-height: 22px;
 	color: #7a7979;
 	width: 560px;
-	height: 220px;
 	border-radius: 14px;
 	background-image: url(./../img/bg_distribution.jpg);
 }
@@ -177,12 +198,8 @@ a{
 	padding-right: 18px;
 }
 
-footer{
-	width: 1150px;
-	margin-left: 25px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+.map{
+	min-width: 100%;
 }
 
 .social{
@@ -218,7 +235,6 @@ footer{
 }
 
 .footer-about{
-	width: 560px;
 	font-size: 13px;
 	font-weight: 400;
 	line-height: 16px
@@ -240,15 +256,11 @@ footer{
 	padding-left: 16px;
 }
 
-.copyryght{
-	width: 320px;
-}
-
 .copyright a{
 	color: #ffffff;
 }
 
-.pop-up-menu,
-form{
+.hidden,
+.pop-up-menu{
 	display: none;
 }
