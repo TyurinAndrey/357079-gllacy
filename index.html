@@ -8,27 +8,30 @@
 			<link rel="stylesheet" href="css/style.css" type="text/css"/>
 		</head>
 		<body>
-			<!-- Дмитрий, сделал чуть больше, чем требовалось по ДЗ, подскажи, хотя бы в правильном направлении думаю про слайдер? -->
-			<header>
-				<a href="index.html" class="main-header-logo">
-					<img src="img/glassyshop_logo.svg" width="154" height="64" alt="GllacyShop логотип">
-				</a>
-				<nav>
-					<ul class="main-navigation">
-						<li>
-							<a href="catalog.html">Каталог</a>
-							<ul class="pop-up-menu">
-								<li><a href="#">Новинки</a></li>
-								<li><a href="#">Сливочное</a></li>
-								<li><a href="#">Щербеты</a></li>
-								<li><a href="#">Фруктовый лед</a></li>
-								<li><a href="#">Новинки</a></li>
-							</ul>
-						</li>
-						<li><a href="#">Доставка и оплата</a></li>
-						<li><a href="#">О Компании</a></li>
-					</ul>
-				</nav>
+			<header class="container">
+				<div class="navigation-menu">
+					<div class="logo-wrapper">
+						<a href="index.html" class="main-header-logo">
+							<img src="img/glassyshop_logo.svg" width="154" height="64" alt="GllacyShop логотип">
+						</a>
+					</div>
+					<nav class="main-navigation">
+						<ul>
+							<li>
+								<a href="catalog.html">Каталог</a>
+								<ul class="pop-up-menu">
+									<li><a href="#">Новинки</a></li>
+									<li><a href="#">Сливочное</a></li>
+									<li><a href="#">Щербеты</a></li>
+									<li><a href="#">Фруктовый лед</a></li>
+									<li><a href="#">Новинки</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Доставка и оплата</a></li>
+							<li><a href="#">О Компании</a></li>
+						</ul>
+					</nav>
+				</div>
 				<div class="customer-menu">
 					<ul>
 						<li>
@@ -56,7 +59,7 @@
 						<li><a href="#">Корзина</a></li>
 					</ul>
 				</div>
-				<section>
+				<section class="work_time">
 					<p>С 10 до 20, ежедневно</p>
 					<p>8 812 450-25-25</p>
 				</section>
@@ -150,22 +153,22 @@
 					
 					<h3>Магазин Глэйси - это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h3>
 					<ul class="advantages">
-						<li>
+						<li class="advantage_1">
 							Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий
 						</li>
-						<li>
+						<li class="advantage_2">
 							Закупка ингредиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество
 						</li>
-						<li>
+						<li class="advantage_3">
 							Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья
 						</li>
-						<li>
+						<li class="advantage_4">
 							Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус
 						</li>
 					</ul>
 				</div>
-
-				<article>
+				<div class="info-stend">
+					<article>
 					<div class="serving">
 						<p>Новое в нашем блоге</p>
 						<a href="#">
@@ -174,9 +177,8 @@
 							</h4>
 						</a>
 					</div>
-				</article>
-				
-				<form class="distribution">
+					</article>
+					<form class="distribution">
 					<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно=)
 					</p>
 					<label for="email">Почта пользователя</label>
@@ -184,27 +186,28 @@
 					<p>
 						<button type="submit">Отправить</button>
 					</p>
-				</form>
+					</form>
+				</div>
 
 			<!-- 	Здесь будет карта -->
-			<img src="img/big_map.jpg" width="1200" height="429" alt="Карта главного офиса в Санкт-Петербурге">
-			<section>
+				<img src="img/big_map.jpg" width="1200" height="429" alt="Карта главного офиса в Санкт-Петербурге">
+				<section>
 				<h4>Адрес главного офиса и офлайн-магазина</h4>
 				<p>ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
 				<p>Для заказов по телефону:</p>
 				<p>8 812 450-25-25</p>
 				<p>(с 10 до 20 ежедневно)</p>
 				<a href="#">Форма обратной связи</a>
-			</section>
+				</section>
 
 			</main>
 			<footer>
 				<div class="social">
 					<ul>
-						<li><a href="#" class="social-button">Твиттер</a></li>
-						<li><a href="#" class="social-button">Инстаграм</a></li>
-						<li><a href="#" class="social-button">Фейсбук</a></li>
-						<li><a href="#" class="social-button">ВКонтакте</a></li>
+						<li><a href="#" class="socail-twitter">Твиттер</a></li>
+						<li><a href="#" class="socail-instagram">Инстаграм</a></li>
+						<li><a href="#" class="socail-facebook">Фейсбук</a></li>
+						<li><a href="#" class="socail-vk">ВКонтакте</a></li>
 					</ul>
 				</div>
 				<div class="footer-about">
