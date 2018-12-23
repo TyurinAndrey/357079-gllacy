@@ -5,13 +5,13 @@
     <title>HTML Academy: Глейси</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <div class="site-container catalog-page">
       <header class="navigation-block">
         <nav class="main-navigation">
-          <a class="navigation-block-logo catalog-logo" href="index.html">
+          <a class="navigation-block-logo catalog-logo" href="https://htmlacademy.ru/intensive/htmlcss">
             <img src="img/glassyshop_logo.svg" width="154" height="64" alt="GllacyShop логотип">
           </a>
           <div class="navigation-container catalog-navigation">
@@ -25,7 +25,7 @@
                     <p>Новинки</p>
                   </li>
                   <li class="pop-up-item">
-                    <a class="active" href="#">Сливочное</a>
+                    <a class="active" href="catalog.html">Сливочное</a>
                   </li>
                   <li class="pop-up-item">
                     <a href="#">Щербеты</a>
@@ -127,23 +127,11 @@
       </header>
       <main class="container">
         <div class="user-info has-breadcrumbs">
-          <ul class="breadcrumbs">
-            <li class="crumb">
-              <a href="index.html"> Главная </a>
-            </li>
-            <li class="crumb">
-              &#187;
-            </li>
-            <li class="crumb">
-              <a href="catalog.html"> Каталог </a>
-            </li>
-            <li class="crumb">
-              &#187;
-            </li>
-            <li class="crumb crumb-active">
-               Сливочное
-            </li>
-          </ul>
+          <div class="breadcrumbs">
+            <a class="breadcrumbs-item" href="#">Главная</a>
+            <a class="breadcrumbs-item" href="#">Каталог</a>
+            <a class="breadcrumbs-item breadcrumbs-item-current">Сливочное</a>
+          </div>
           <div class="main-contacts">
             <p> С 10 до 20, ежедневно </p>
             <p><a href="tel:+78124502525"> 8 812 450-25-25 </a></p>
@@ -169,8 +157,8 @@
               <fieldset class="ranges">
                 <legend class="price-controls">
                   <span class="range-label">Цена:</span>
-                    <label class="min-price"><input type="text" name="min-price" value="100 руб."></label>
-                    <label class="max-price"><input type="text" name="max-price" value="500 руб."></label>
+                  <label class="min-price"><input type="text" name="min-price" value="100 руб."></label>
+                  <label class="max-price"><input type="text" name="max-price" value="500 руб."></label>
                 </legend>
                 <div class="filters-background">
                   <div class="range-controls">
@@ -450,5 +438,6 @@
         </div>
       </footer>
     </div>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
