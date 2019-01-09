@@ -1,54 +1,46 @@
-var link = document.querySelector(".feedback-form-button");
+var feedback = document.querySelector(".contacts-feedback");
 var popup = document.querySelector(".modal-feedback");
-var mask = document.querySelector(".modal-mask");
+var overlay = document.querySelector(".overlay");
 var close = popup.querySelector(".modal-close");
 
+var login = popup.querySelector("[name=feedback-login]");
 var form = popup.querySelector("form");
-var name = popup.querySelector("[name=feedback-name]");
 var email = popup.querySelector("[name=feedback-email]");
-var message = popup.querySelector("[name=callnack-message]");
+var message = popup.querySelector("textarea");
 
-var storageName = localStorage.getItem("name");
-var storageEmail = localStorage.getItem("email");
-
-link.addEventListener("click", function (evt) {
+feedback.addEventListener("click", function (evt) {
   evt.preventDefault();
-  popup.classList.add("show-modal");
-  mask.classList.add("visible");
-
-  if (storageName && storageEmail) {
-    name.value = storageName;
-    email.value = storageEmail;
-  }
+  popup.classList.remove("modal-closing");
+  popup.classList.add("modal-show");
+  overlay.classList.add("overlay-show");
 });
 
 close.addEventListener("click", function (evt) {
   evt.preventDefault();
-  popup.classList.remove("show-modal");
-  mask.classList.remove("visible");
-  popup.classList.remove("error-modal");
+  popup.classList.remove("modal-show");
+  popup.classList.remove("modal-error");
+  popup.classList.add("modal-closing");
+  overlay.classList.remove("overlay-show");
 });
 
 form.addEventListener("submit", function (evt) {
-  evt.preventDefault();
-  if (!name.value || !email.value || !message.value) {
+  if (!email.value || !message.value) {
     evt.preventDefault();
-    popup.classList.remove("error-modal");
+    popup.classList.remove("modal-error");
     popup.offsetWidth = popup.offsetWidth;
-    popup.classList.add("error-modal");
-  }
-  else {
-    localStorage.setItem("name", name.value);
-    localStorage.setItem("email", email.value);
-  }
+    popup.classList.add("modal-error");
+  } 
 });
 
 window.addEventListener("keydown", function (evt) {
-if (evt.keyCode === 27) {
-  if (popup.classList.contains("show-modal")) {
-    popup.classList.remove("show-modal");
-    popup.classList.remove("error-modal");
-    mask.classList.remove("visible");
+  if (evt.keyCode === 27) {
+    evt.preventDefault();
+    if (popup.classList.contains("modal-show")) {
+      popup.classList.remove("modal-show");
+      popup.classList.remove("modal-error");
+      popup.classList.add("modal-closing");
+      overlay.classList.remove("overlay-show");
+    }
   }
-}
 });
+
